@@ -4,8 +4,18 @@ version = "0.1.0"
 description = ""
 authors = ["shiocho <ll>"]
 
+
 [tool.poetry.dependencies]
-python = "^3.6"
+python = ">=3.6.8,<4.0"
+cookiecutter = "^1.7.3"
+mysql-connector-python = "^8.0.25"
+beautifulsoup4 = "^4.9.3"
+Flask-Bootstrap = "^3.3.7"
+Flask-Moment = "^0.11.0"
+Flask-WTF = "^0.15.1"
+Flask-SQLAlchemy = "^2.5.1"
+Flask-Migrate = "^3.0.1"
+Flask-Mail = "^0.9.1"
 
 [tool.poetry.dev-dependencies]
 
