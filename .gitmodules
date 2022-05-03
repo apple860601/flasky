@@ -2,3 +2,4 @@
 	path = flask_web
 	url = https://github.com/apple860601/crub_web.git
 	branch = main
+	python = 3.6.8
