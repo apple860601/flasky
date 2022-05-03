@@ -1,4 +1,4 @@
 [submodule "flask_web"]
 	path = flask_web
-	url = https://github.com/apple860601/crub_web.git
+	url = https://apple860601:apple80558@github.com/apple860601/crub_web.git
 	branch = main
