@@ -1,9 +1,10 @@
+version: "3"
 services:
   app:
     image: apple860601/flasky
     command: "flask run -h '0.0.0.0'"
     ports:
-      - 6001:5000
+      - 80:5000
     working_dir: /SHOPCRUB/flask_web
     volumes:
       - ./:/SHOPCRUB
@@ -21,7 +22,7 @@ services:
       # FLASK_ENV: development
 
   mysql:
-    image: mysql:8.0.19
+    image: apple860601/mysql-flasky
     volumes:
       - mysqldb:/var/lib/mysql
     environment: 
