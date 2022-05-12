@@ -5,29 +5,41 @@ services:
     command: "flask run -h '0.0.0.0'"
     ports:
       - 80:5000
+      - 587:587
     working_dir: /SHOPCRUB/flask_web
     volumes:
       - ./:/SHOPCRUB
     environment:
       MYSQL_HOST: mysql
-      MYSQL_USER: root
-      MYSQL_PASSWORD: apple80558
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'apple80558'
       MYSQL_DB: flaskdb
       FLASK_APP: flasky.py
       FLASK_DEBUG: True
-      FLASKY_ADMIN: apple860601@gmail.com
+      FLASKY_ADMIN: apple19746@gmail.com
       ADMIN_NAME: shiocho
       ADMIN_PASSWORD: apple80558
       ADMIN_LOCATION: 台北市中正區重慶南路一段122號
+      FLASKY_MAIL_SENDER: apple19746@gmail.com
+      MAIL_USERNAME: apple19746@gmail.com
+      MAIL_PASSWORD: apple80558
+      MAIL_SERVER: 'smtp.googlemail.com'
+      MAIL_PORT: 587
+      MAIL_USE_TLS: True
       # FLASK_ENV: development
 
   mysql:
     image: apple860601/mysql-flasky
+    cap_add:
+      - SYS_NICE
     volumes:
       - mysqldb:/var/lib/mysql
     environment: 
-      MYSQL_ROOT_PASSWORD: apple80558
-      MYSQL_DATABASE: flaskdb
+      MYSQL_ROOT_PASSWORD : 'apple80558'
+      MYSQ_PASSWORD : 'user'
+      MYSQL_PASSWORD: 'apple80558'
+      MYSQL_DATABASE: 'flaskdb'
+      MYSQL_TCP_PORT: 3306
     ports:
       - 3306:3306
 
